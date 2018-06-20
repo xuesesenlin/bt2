@@ -22,6 +22,17 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+#mail
+  mail:
+    host: smtp.163.com
+    username: xuesemofa@126.com
+    password: liudong1013
+    port: 25
+    protocol: smtp
+    default-encoding: UTF-8
 #自定义分页条数
 page:
   pageSize: 15
+#文件上传地址
+file:
+  filePath: D://

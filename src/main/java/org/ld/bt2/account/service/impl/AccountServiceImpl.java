@@ -6,6 +6,9 @@ import org.ld.bt2.account.model.AccountModel;
 import org.ld.bt2.account.service.AccountService;
 import org.ld.bt2.util.resultJson.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -25,7 +28,7 @@ import java.util.List;
  * @author ld
  * @name
  * @table
- * @remarks
+ * @remarks http://blog.720ui.com/2017/springboot_02_data_cache_concurrenmapcache/#%E5%BC%80%E5%90%AF%E7%BC%93%E5%AD%98%E6%94%AF%E6%8C%81
  */
 @Slf4j
 @Service
@@ -34,7 +37,8 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountJpa jpa;
 
-
+    //    缓存更新
+    @CachePut("account")
     @Transactional
     @Override
     public ResponseResult<AccountModel> save(AccountModel model) {
@@ -47,6 +51,8 @@ public class AccountServiceImpl implements AccountService {
         return new ResponseResult<>(true, "成功", null);
     }
 
+    //    缓存删除
+    @CacheEvict("account")
     @Transactional
     @Override
     public ResponseResult<AccountModel> delete(String uuid) {
@@ -54,6 +60,8 @@ public class AccountServiceImpl implements AccountService {
         return new ResponseResult<>(true, "成功", null);
     }
 
+    //    缓存更新
+    @CachePut("account")
     @Transactional
     @Override
     public ResponseResult<AccountModel> update(AccountModel model) {
@@ -64,6 +72,8 @@ public class AccountServiceImpl implements AccountService {
         return new ResponseResult<>(true, "成功", null);
     }
 
+    //    缓存读取
+    @Cacheable("account")
     @Override
     public ResponseResult<AccountModel> findByAccount(String account) {
         List<AccountModel> list = jpa.findByAccount(account);
@@ -73,6 +83,8 @@ public class AccountServiceImpl implements AccountService {
             return new ResponseResult<>(false, "为查询到数据", null);
     }
 
+    //    缓存读取
+    @Cacheable("account")
     @Override
     public ResponseResult<Page<AccountModel>> page(int pageNow, int pageSize, AccountModel model) {
         List<Sort.Order> orders = new ArrayList<>();
