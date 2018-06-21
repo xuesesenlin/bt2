@@ -36,3 +36,8 @@ page:
 #文件上传地址
 file:
   filePath: D://
+#  shiro
+shiro:
+  token:
+    key: usertoken
+    expirateTime: 900
