@@ -44,7 +44,7 @@ public class StatelessAuthcFilter extends AccessControlFilter {
 //                (HttpServletRequest) request, "authorization");
         String authorization = httpRequest.getHeader("authorization");
         if (StringUtils.isEmpty(authorization)) {
-            onLoginFail(response, "请求头不包含认证信息authorization");
+            onLoginFail(response, "验证失败，请登录");
             return false;
         }
         // 获取无状态Token  

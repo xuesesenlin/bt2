@@ -44,11 +44,8 @@ public class StatelessRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(
             AuthenticationToken token) throws AuthenticationException {
         StatelessToken statelessToken = (StatelessToken) token;
-
         String userCode = (String) statelessToken.getPrincipal();
-
         checkUserExists(userCode);
-
         String credentials = (String) statelessToken.getCredentials();
         boolean checkToken = tokenManager.checkToken(statelessToken);
         if (checkToken) {

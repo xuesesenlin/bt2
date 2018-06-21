@@ -77,10 +77,10 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public ResponseResult<AccountModel> findByAccount(String account) {
         List<AccountModel> list = jpa.findByAccount(account);
-        if (list.isEmpty())
+        if (list.size() > 0)
             return new ResponseResult<>(true, "成功", list.get(0));
         else
-            return new ResponseResult<>(false, "为查询到数据", null);
+            return new ResponseResult<>(false, "未查询到数据", null);
     }
 
     //    缓存读取

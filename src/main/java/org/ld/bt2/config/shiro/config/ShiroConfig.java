@@ -166,11 +166,7 @@ public class ShiroConfig {
 
         //1， 相同url规则，后面定义的会覆盖前面定义的(执行的时候只执行最后一个)。
         //2， 两个url规则都可以匹配同一个url，只执行第一个
-        filterChainDefinitionMap.put("/html/**", "anon");
-        filterChainDefinitionMap.put("/resource/**", "anon");
-        filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/login/**", "anon");
-        filterChainDefinitionMap.put("/favicon.ico", "anon");
         filterChainDefinitionMap.put("/**", "statelessAuthc");
 
         bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
