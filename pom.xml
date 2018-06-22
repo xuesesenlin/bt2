@@ -126,6 +126,12 @@
         <!--<artifactId>thymeleaf-extras-shiro</artifactId>-->
         <!--<version>2.0.0</version>-->
         <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.0</version>
+        </dependency>
         <!--@SLF4J 日志标准-->
         <dependency>
             <groupId>org.projectlombok</groupId>
