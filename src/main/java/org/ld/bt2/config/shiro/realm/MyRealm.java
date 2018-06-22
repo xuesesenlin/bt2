@@ -72,6 +72,7 @@ public class MyRealm extends AuthorizingRealm {
         if (!JWTUtil.verify(token, username, result.getData().getPassword())) {
             throw new AuthenticationException("账户或密码错误");
         }
+//        此处用相同的token只是做登陆用，密码的正确与否上边已经判断
         return new SimpleAuthenticationInfo(token, token, "my_realm");
     }
 }

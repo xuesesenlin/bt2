@@ -6,8 +6,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
-import java.util.Date;
-
 /**
  * @author ld
  * @name
@@ -17,7 +15,7 @@ import java.util.Date;
 public class JWTUtil {
 
     // 过期时间5分钟
-    private static final long EXPIRE_TIME = 5 * 60 * 1000;
+    private static final long EXPIRE_TIME = 60 * 60 * 1000;
 
     /**
      * 校验token是否正确
@@ -61,12 +59,14 @@ public class JWTUtil {
      * @return 加密的token
      */
     public static String sign(String username, String secret) {
-        Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
+//        此处不设置签发时间，是否过期通过判断此令牌是否在缓存中存在
+//        缓存可以考虑redis库,也可以用spring的缓存,能实现缓存过期时间即可
+//        Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
         Algorithm algorithm = Algorithm.HMAC256(secret);
         // 附带username信息
         return JWT.create()
                 .withClaim("username", username)
-                .withExpiresAt(date)
+//                .withExpiresAt(date)
                 .sign(algorithm);
     }
 }
