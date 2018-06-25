@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.thymeleaf.exceptions.TemplateInputException;
+import org.thymeleaf.exceptions.TemplateProcessingException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -450,6 +451,21 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = TemplateInputException.class)
     public ResponseResult<String> templateInputException(HttpServletRequest request,
                                                          Exception exception) throws Exception {
+        exception.printStackTrace();
+        log.debug("ERROR::::：" + exception.getLocalizedMessage() + "::::::" + new Date());
+        log.debug("ERROR::::：" + exception.getCause() + "::::::" + new Date());
+        log.debug("ERROR::::：" + Arrays.toString(exception.getSuppressed()) + "::::::" + new Date());
+        log.debug("ERROR::::：" + exception.getMessage() + "::::::" + new Date());
+        log.debug("ERROR::::：" + Arrays.toString(exception.getStackTrace()) + "::::::" + new Date());
+        ResponseResult<String> result = new ResponseResult<>();
+        result.setSuccess(false);
+        result.setMessage("页面书写错误");
+        return result;
+    }
+
+    @ExceptionHandler(value = TemplateProcessingException.class)
+    public ResponseResult<String> templateProcessingException(HttpServletRequest request,
+                                                              Exception exception) throws Exception {
         exception.printStackTrace();
         log.debug("ERROR::::：" + exception.getLocalizedMessage() + "::::::" + new Date());
         log.debug("ERROR::::：" + exception.getCause() + "::::::" + new Date());
