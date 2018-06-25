@@ -1,0 +1,189 @@
+<div class="col-lg-12">
+    <div class="col-lg-3">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>资产分类</h5>
+            </div>
+            <div class="ibox-content">
+                <div id="using_json"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>新建事项</h5>
+                <h5>行政事业单位国有资产处置申请表</h5>
+            </div>
+            <div class="ibox-content">
+                <form method="get" class="form-horizontal">
+                    <div class="row">
+                        <label class="col-md-2 control-label">单位名称：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>申请时间：</label>
+                        <div class="col-md-4">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input
+                                        type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label">处置单号：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                        <label class="col-md-2 control-label">单位负责人：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label">经办人：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                        <label class="col-md-2 control-label">经办人电话：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label">处置资产原值总额：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                        <label class="col-md-2 control-label">接收方：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label">处置形式：</label>
+                        <div class="col-md-4">
+                            <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                    tabindex="2">
+                                <option value="United States">报废</option>
+                                <option value="Afghanistan">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="hr-line-dashed"></div>
+
+                    <div class="row">
+                        <label class="col-md-2 control-label">带处置资产明细</label>
+                        <div class="col-md-6">
+                            <input type="button" value="添加资产"/>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>字段a</th>
+                                <th>字段b</th>
+                                <th>字段c</th>
+                                <th>字段d</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table_data">
+                            <tr>
+                                <td>1</td>
+                                <td>测试值a</td>
+                                <td>测试值b</td>
+                                <td>测试值c</td>
+                                <td>测试值d</td>
+                            </tr>
+                            </tbody>
+                            <!--<tfoot>-->
+                            <!--<tr>-->
+                                <!--<td colspan="7" class="footable-visible">-->
+                                    <!--<ul class="pagination pull-right">-->
+                                        <!--<li class="footable-page-arrow">-->
+                                            <!--<a data-page="first">-->
+                                                <!--<font style="vertical-align: inherit;">«</font>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="footable-page active pageNow">-->
+                                            <!--<a>-->
+                                                <!--<font style="vertical-align: inherit;">1</font>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="footable-page-arrow" id="people_page_last">-->
+                                            <!--<a data-page="last">-->
+                                                <!--<font style="vertical-align: inherit;">»</font>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <!--</tfoot>-->
+                        </table>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label">制单人:</label>
+                        <div class="col-md-4">
+                            <label>xxx</label>
+                        </div>
+                        <label class="col-md-2 control-label">制单日期:</label>
+                        <div class="col-md-4">
+                            <label>xxxx年xx月xx日</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#using_json').jstree({
+        'core': {
+            'data': [{
+                'text': '出仓',
+                'state': {
+                    'opened': false
+                },
+                'children': [
+                    {
+                        'text': '资产处置申报',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '已申报事项进度',
+                            'children': [{
+                                'text': '办理中',
+                            }, {
+                                'text': '已完成',
+                            }, {
+                                'text': '未完成',
+                            }, {
+                                'text': '新建',
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }
+                ]
+            }, {
+                'text': '资产处置执行',
+                'state': {
+                    'opened': false
+                },
+                'children': [
+                    {
+                        'text': '新建'
+                    },{
+                        'text': '执行单查询'
+                    },{
+                        'text': '已处置资产查询'
+                    }
+                ]
+            }, {
+                'text': '历年事项查询'
+            }]
+        }
+    });
+
+});
+</script>

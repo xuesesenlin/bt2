@@ -1,0 +1,72 @@
+<div class="col-lg-12">
+    <div class="ibox float-e-margins htmlBody2">
+        <div class="ibox-title">
+            <!--<h5>查询条件</h5>-->
+            <label>条件A:</label>
+            <input/>
+            <label>条件B:</label>
+            <input/>
+            <label>条件C:</label>
+            <input/>
+            <label>条件D:</label>
+            <input/>
+            <label>条件E:</label>
+            <input/>
+            <input class="btn btn-sm btn-primary" type="button" value="查询"/>
+            <input class="btn btn-sm btn-primary" type="button" value="新增"/>
+        </div>
+        <div class="ibox-content">
+            <div class="row table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>字段a</th>
+                        <th>字段b</th>
+                        <th>字段c</th>
+                        <th>字段d</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table_data">
+                    <tr>
+                        <th>1</th>
+                        <th>测试值a</th>
+                        <th>测试值b</th>
+                        <th>测试值c</th>
+                        <th>测试值d</th>
+                        <th>
+                            <input class="btn btn-sm btn-primary" type="button" value="删除"/>
+                            <input class="btn btn-sm btn-primary" type="button" value="修改"/>
+                            <input class="btn btn-sm btn-primary" type="button" value="其它操作"/>
+                        </th>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="7" class="footable-visible">
+                            <ul class="pagination pull-right">
+                                <li class="footable-page-arrow">
+                                    <a data-page="first">
+                                        <font style="vertical-align: inherit;">«</font>
+                                    </a>
+                                </li>
+                                <li class="footable-page active pageNow">
+                                    <a>
+                                        <font style="vertical-align: inherit;">1</font>
+                                    </a>
+                                </li>
+                                <li class="footable-page-arrow" id="people_page_last">
+                                    <a data-page="last">
+                                        <font style="vertical-align: inherit;">»</font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

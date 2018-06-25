@@ -1,0 +1,1157 @@
+<div class="col-lg-12">
+    <div class="col-lg-3">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>资产分类</h5>
+            </div>
+            <div class="ibox-content">
+                <div id="using_json"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>通用设备</h5>
+            </div>
+            <div class="ibox-content">
+                <form method="get" class="form-horizontal">
+                    <div class="row">
+                        <label class="col-md-2 control-label">编号：</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>资产分类名称：</label>
+                        <div class="col-md-4"><input type="text" placeholder="水田" class="form-control"></div>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>资产名称：</label>
+                        <div class="col-md-4"><input type="text" placeholder="水田" class="form-control"></div>
+
+                        <label class="col-md-2 control-label">预算项目编号</label>
+                        <div class="col-md-4"><input type="text" placeholder="" class="form-control"></div>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>使用状态：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">在用</option>
+                                    <option value="United Kingdom">闲置</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>使用方向</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">自用</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>采购组织形式：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">政府集中采购</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>取得方式：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">新购</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>取得日期：</label>
+                        <div class="col-md-4">
+                            <div class="form-group" id="data_1">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input
+                                        type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>品牌：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>规格型号：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>使用部门：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>管理部门：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>使用人：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>生产厂家：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>存放地点：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>价值类型：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">原价</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>财政性资金（元）：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>价值（元）：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>非财政性资金（元）：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>财务入账状态：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">未入账</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>账务入账日期：</label>
+                        <div class="col-md-4">
+                            <div class="form-group" id="data_2">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input
+                                        type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>会计凭证号：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>折旧状态：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <select data-placeholder="Choose a Country..." class="form-control" style="width:350px;"
+                                        tabindex="2">
+                                    <option value="United States">已完成折旧</option>
+                                    <option value="Afghanistan">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>销售商：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>投入使用日期：</label>
+                        <div class="col-md-4">
+                            <div class="form-group" id="data_3">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input
+                                        type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>预计使用年限（月）：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>保修截至日期：</label>
+                        <div class="col-md-4">
+                            <div class="form-group" id="data_4">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input
+                                        type="text" class="form-control" value="03/04/2014">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>合同编号：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>发票号：</label>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div >
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>账面净值（元）：</label>
+                        <div class="col-md-4">
+                            <div >
+                                <input type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>照片：</label>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div  style="border:1px solid black; width:50px; height:50px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <label class="col-md-2 control-label"><label class="text-danger">*</label>备注：</label>
+                        <div class="col-md-10">
+                            <div >
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('#using_json').jstree({
+        'core': {
+            'data': [{
+                'text': '固定资产',
+                'state': {
+                <!--是否默认打开-->
+                    'opened': false
+                },
+                'children': [
+
+                    {
+                        'text': '土地、房屋及构筑物',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }, {
+                        'text': '通用设备',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }, {
+                        'text': '专用设备',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }, {
+                        'text': '文物和陈列品',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }, {
+                        'text': '图书、档案',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    }, {
+                        'text': '家居、用具、装具及动植物',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [{
+                            'text': '土地、海域及无居民海岛',
+                            'children': [{
+                                'text': '耕地',
+                                'children': [{
+                                    'text': '水田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水浇地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '旱田',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他耕地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '园地',
+                                'children': [{
+                                    'text': '果园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '茶园',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他园地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '林地',
+                                'children': [{
+                                    'text': '有林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '灌木林地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他林地',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '草地',
+                                'children': [{
+                                    'text': '天然牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '人工牧草地',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他草地',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '房屋',
+                            'children': [{
+                                'text': '生产用房',
+                                'children': [{
+                                    'text': '工业生产用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '农林牧渔业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '建筑业用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '其他生产用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '交通、邮电用房',
+                                'children': [{
+                                    'text': '铁路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '公路交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '水运交通用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '航空交通用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '商业及服务业用房',
+                                'children': [{
+                                    'text': '金融服务器用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '批发零售用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '住宿餐饮用房',
+                                    'icon': 'none'
+                                }]
+                            }, {
+                                'text': '行政单位用房',
+                                'children': [{
+                                    'text': '办公用房',
+                                    'icon': 'none'
+                                }, {
+                                    'text': '业务用房',
+                                    'icon': 'none'
+                                }]
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }, {
+                            'text': '构筑物',
+                            'children': [{
+                                'text': '池',
+                                'icon': 'none'
+                            }, {
+                                'text': '罐',
+                                'icon': 'none'
+                            }, {
+                                'text': '槽',
+                                'icon': 'none'
+                            }, {
+                                'text': '塔',
+                                'icon': 'none'
+                            }],
+                            'state': {
+                                'opened': false
+                            }
+                        }]
+                    },
+                ]
+            }, {
+                'text': '无形资产'
+            }]
+        }
+    });
+
+});
+
+
+
+</script>

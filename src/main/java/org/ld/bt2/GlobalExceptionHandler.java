@@ -10,6 +10,8 @@ import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.thymeleaf.exceptions.TemplateInputException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,6 +32,7 @@ import java.util.Date;
 @Slf4j
 @ControllerAdvice
 @ResponseBody
+@RestController
 public class GlobalExceptionHandler {
 
     /**
@@ -429,18 +432,6 @@ public class GlobalExceptionHandler {
         return result;
     }
 
-    @ExceptionHandler(value = org.springframework.beans.factory.BeanCreationException.class)
-    public void BeanCreationException(HttpServletRequest request,
-                                      Exception exception) throws Exception {
-        exception.printStackTrace();
-        log.debug("ERROR::::：" + exception.getLocalizedMessage() + "::::::" + new Date());
-        log.debug("ERROR::::：" + exception.getCause() + "::::::" + new Date());
-        log.debug("ERROR::::：" + Arrays.toString(exception.getSuppressed()) + "::::::" + new Date());
-        log.debug("ERROR::::：" + exception.getMessage() + "::::::" + new Date());
-        log.debug("ERROR::::：" + Arrays.toString(exception.getStackTrace()) + "::::::" + new Date());
-        System.out.println("请购买此产品");
-    }
-
     @ExceptionHandler(value = CannotGetJdbcConnectionException.class)
     public ResponseResult<String> CannotGetJdbcConnectionException(HttpServletRequest request,
                                                                    Exception exception) throws Exception {
@@ -453,6 +444,21 @@ public class GlobalExceptionHandler {
         ResponseResult<String> result = new ResponseResult<>();
         result.setSuccess(false);
         result.setMessage("数据库链接错误");
+        return result;
+    }
+
+    @ExceptionHandler(value = TemplateInputException.class)
+    public ResponseResult<String> templateInputException(HttpServletRequest request,
+                                                         Exception exception) throws Exception {
+        exception.printStackTrace();
+        log.debug("ERROR::::：" + exception.getLocalizedMessage() + "::::::" + new Date());
+        log.debug("ERROR::::：" + exception.getCause() + "::::::" + new Date());
+        log.debug("ERROR::::：" + Arrays.toString(exception.getSuppressed()) + "::::::" + new Date());
+        log.debug("ERROR::::：" + exception.getMessage() + "::::::" + new Date());
+        log.debug("ERROR::::：" + Arrays.toString(exception.getStackTrace()) + "::::::" + new Date());
+        ResponseResult<String> result = new ResponseResult<>();
+        result.setSuccess(false);
+        result.setMessage("页面书写错误");
         return result;
     }
 
