@@ -1,7 +1,9 @@
 package org.ld.bt2.business.account.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.ld.bt2.business.account.model.AccountModel;
 import org.ld.bt2.business.account.service.AccountService;
 import org.ld.bt2.util.resultJson.ResponseResult;
@@ -31,6 +33,7 @@ public class AccountController {
     private AccountService service;
 
     @RequiresAuthentication
+    @RequiresPermissions(value = {"account:page"}, logical = Logical.AND)
     @RequestMapping(value = "/account/{pageNow}", method = RequestMethod.GET)
     public ResponseResult<Page<AccountModel>> page(@PathVariable("pageNow") int pageNow,
                                                    @RequestParam(value = "account", required = false) String account) {
@@ -41,6 +44,7 @@ public class AccountController {
     }
 
     @RequiresAuthentication
+    @RequiresPermissions(value = {"account:save"}, logical = Logical.AND)
     @RequestMapping(value = "/account", method = RequestMethod.POST)
     public ResponseResult<AccountModel> save(@Valid @ModelAttribute("form") AccountModel model,
                                              BindingResult result) {
@@ -50,13 +54,13 @@ public class AccountController {
     }
 
     @RequiresAuthentication
+    @RequiresPermissions(value = {"account:delete"}, logical = Logical.AND)
     @RequestMapping(value = "/account/{uuid}", method = RequestMethod.DELETE)
     public ResponseResult<AccountModel> delete(@PathVariable("uuid") String uuid) {
         return service.delete(uuid);
     }
 
     //    此方法需调整，验证等其它
-    @RequiresAuthentication
     @RequestMapping(value = "/account/{account}", method = RequestMethod.PUT)
     public ResponseResult<AccountModel> updatePWD(@PathVariable("account") String account,
                                                   @RequestParam("password") String password,
