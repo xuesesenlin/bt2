@@ -5,6 +5,7 @@ import org.ld.bt2.jurisdiction.jurisdiction.jpa.JurisdictionJpa;
 import org.ld.bt2.jurisdiction.jurisdiction.model.JurisdictionModel;
 import org.ld.bt2.jurisdiction.jurisdiction.service.JurisdictionService;
 import org.ld.bt2.util.resultJson.ResponseResult;
+import org.ld.bt2.util.springUtil.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -13,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -21,6 +23,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -114,5 +117,38 @@ public class JurisdictionServiceImpl implements JurisdictionService {
                 return cb.and(predicates.toArray(new Predicate[predicates.size()]));
             }
         };
+    }
+
+    @Override
+    public ResponseResult<List<JurisdictionModel>> jur() {
+        Map<String, Controller> map = SpringUtils.getBeansOfType(Controller.class);
+        map.forEach((k, v) -> {
+            System.out.println(k + "--------" + v);
+        });
+//        String[] controllers = SpringUtils.controllers(Controller.class);
+//        if (controllers != null) {
+//            for (String controllerBeanName : controllers) {
+//                //得到方法
+////                Method[] methods = bean.getDeclaredMethods();
+////                for (Method method : methods) {
+////                    //判断是否存在requestMapping注释
+////                    boolean present = method.isAnnotationPresent(RequestMapping.class);
+////                    if(present){
+////                        //得到requestMapping注释
+////                        RequestMapping annotation = method.getAnnotation(RequestMapping.class);
+////                        //输出 annotation RequestMapping包含的信息(headers=[], name=, path=[], value=[toTicket], produces=[], method=[], params=[], consumes=[])
+////                        //System.err.println(annotation);
+////                        //得到value数组
+////                        String[] value = annotation.value();
+////                        for (String string2 : value) {
+////                            //输出value值
+////                            System.out.println(string2);
+////                        }
+////                    }
+////                }
+//            }
+//        }
+//        System.out.println("Controller的数量:" + controllers.length);
+        return null;
     }
 }

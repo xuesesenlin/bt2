@@ -4,6 +4,8 @@ import org.ld.bt2.jurisdiction.jurisdiction.model.JurisdictionModel;
 import org.ld.bt2.util.resultJson.ResponseResult;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 /**
  * @author ld
  * @name
@@ -21,4 +23,6 @@ public interface JurisdictionService {
     ResponseResult<JurisdictionModel> findByUuid(String uuid);
 
     ResponseResult<Page<JurisdictionModel>> page(int pageNow, int pageSize, JurisdictionModel model);
+
+    ResponseResult<List<JurisdictionModel>> jur();
 }
