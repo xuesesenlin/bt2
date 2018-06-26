@@ -5,7 +5,9 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /**
@@ -32,11 +34,13 @@ public class AccountModel implements Serializable {
     private String uuid;
     //账号
     @NotBlank(message = "账户不能为空")
+    @Email(message = "不是正确的email格式")
     @Length(min = 6, max = 30, message = "账户长度为6-30位")
     @Column(name = "account", length = 30)
     private String account;
     //密码
     @NotBlank(message = "密码不能为空")
+    @Pattern(regexp = "/^[a-zA-Z0-9_\\.]+$/")
     @Length(min = 6, max = 30, message = "密码长度为6-30位")
     @Column(name = "password", length = 30)
     private String password;
